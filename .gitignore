@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.env*
+*.log
+*.png
+
+# Legacy static prototype; the production site is the Next.js app.
+index.html
+styles.css
+script.js
