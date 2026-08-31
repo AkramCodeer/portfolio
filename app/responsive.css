@@ -1,20 +1,74 @@
 /* Final layout safeguards for every viewport and embedded browser. */
-html,body,main{width:100%;max-width:100%;overflow-x:clip}
-.work,.connect,.ai-section{width:100%;max-width:none}
-.project-grid,.project,.section-top>div,.skills>div,.ai-inner>div{min-width:0}
-img,svg,video,canvas{max-width:100%;height:auto}
-
-@media (max-width:700px){
-  .work,.connect,.ai-section{margin-left:0;margin-right:0}
-  .work>.shell,.connect>.shell,.ai-section>.shell{width:calc(100% - 38px);max-width:100%}
-  .project-grid{width:100%;grid-template-columns:minmax(0,1fr)}
-  .project{width:100%;max-width:100%}
-  .project-meta span,.project-note{overflow-wrap:anywhere}
-  .skills{width:calc(100% - 38px);max-width:100%}
+html,
+body,
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+.work,
+.connect,
+.ai-section {
+  width: 100%;
+  max-width: none;
+}
+.project-grid,
+.project,
+.section-top > div,
+.skills > div,
+.ai-inner > div {
+  min-width: 0;
+}
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
 }
 
-@media (max-width:480px){
-  .work>.shell,.connect>.shell,.ai-section>.shell,.skills{width:calc(100% - 32px)}
-  .phone{max-width:100%}
-  .skill-cloud span{max-width:100%}
+@media (max-width: 700px) {
+  .work,
+  .connect,
+  .ai-section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .work > .shell,
+  .connect > .shell,
+  .ai-section > .shell {
+    width: calc(100% - 38px);
+    max-width: 100%;
+  }
+  .project-grid {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .project {
+    width: 100%;
+    max-width: 100%;
+  }
+  .project-meta span,
+  .project-note {
+    overflow-wrap: anywhere;
+  }
+  .skills {
+    width: calc(100% - 38px);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .work > .shell,
+  .connect > .shell,
+  .ai-section > .shell,
+  .skills {
+    width: calc(100% - 32px);
+  }
+  .phone {
+    max-width: 100%;
+  }
+  .skill-cloud span {
+    max-width: 100%;
+  }
 }
