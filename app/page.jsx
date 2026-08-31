@@ -1,4 +1,8 @@
-const links={github:"https://github.com/AkramCodeer",linkedin:"https://www.linkedin.com/in/akram-khan-5a7a06201/",email:"mailto:akram1612khan@gmail.com"};
+const links = {
+  github: "https://github.com/AkramCodeer",
+  linkedin: "https://www.linkedin.com/in/akram-khan-5a7a06201/",
+  email: "mailto:akram1612khan@gmail.com",
+};
 const skills=["JavaScript","React","Next.js","Node.js","Express","MongoDB","Angular","Firebase","REST APIs","Git & GitHub","OpenAI API","Generative AI","Speech-to-Text","Responsive UI"];
 const Arrow=()=> <span aria-hidden="true">↗</span>;
 export default function Home(){return <main>
