@@ -544,3 +544,25 @@ footer a {
     display: none;
   }
 }
+
+.github-history { background: var(--ink); color: #f5f2eb; padding: 110px 0; }
+.history-heading { display: grid; grid-template-columns: 25% 75%; margin-bottom: 55px; }
+.history-heading h2 { font-size: 52px; }
+.history-heading > div > p { color: #b9bdb4; font-size: 13px; line-height: 1.65; max-width: 440px; margin: 20px 0 0; }
+.contribution-card { display: block; padding: 24px 26px 22px; border: 1px solid #596055; background: #252925; color: inherit; text-decoration: none; transition: transform .2s ease, border-color .2s ease; }
+.contribution-card:hover { transform: translateY(-4px); border-color: var(--acid); }
+.contribution-topline, .contribution-footer { display: flex; justify-content: space-between; gap: 15px; font: 500 9px 'DM Mono'; letter-spacing: .11em; }
+.contribution-topline > span:last-child { color: var(--acid); }
+.contribution-topline span span { margin-left: 8px; font-size: 14px; }
+.contribution-chart { margin: 24px 0 19px; overflow-x: auto; padding-bottom: 2px; }
+.month-labels { min-width: 760px; display: grid; grid-template-columns: repeat(53, 1fr); padding-left: 37px; color: #adb3aa; font: 500 9px 'DM Mono'; }
+.chart-body { min-width: 797px; display: flex; gap: 8px; margin-top: 7px; }
+.day-labels { width: 29px; display: grid; grid-template-rows: repeat(7, 11px); gap: 3px; color: #adb3aa; font: 500 8px 'DM Mono'; }
+.day-labels span:nth-child(1) { grid-row: 2; }.day-labels span:nth-child(2) { grid-row: 4; }.day-labels span:nth-child(3) { grid-row: 6; }
+.contribution-grid { display: grid; grid-template-columns: repeat(53, 11px); grid-template-rows: repeat(7, 11px); grid-auto-flow: column; gap: 3px; }
+.contribution-grid i, .legend i { display: block; width: 11px; height: 11px; border-radius: 2px; }
+.level-0 { background: #3b423b; }.level-1 { background: #607c2d; }.level-2 { background: #85aa39; }.level-3 { background: #b7dc43; }.level-4 { background: var(--acid); }
+.contribution-footer { color: #adb3aa; align-items: center; letter-spacing: .05em; }
+.legend { display: flex; align-items: center; gap: 5px; }.legend i { width: 10px; height: 10px; }
+@media (max-width: 700px) { .github-history { padding: 75px 0; }.history-heading { grid-template-columns: 1fr; gap: 32px; margin-bottom: 37px; }.history-heading h2 { font-size: 45px; }.contribution-card { padding: 18px; }.contribution-footer { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 480px) { .history-heading h2 { font-size: 40px; } }

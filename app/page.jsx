@@ -19,6 +19,13 @@ const skills = [
   "Speech-to-Text",
   "Responsive UI",
 ];
+const contributionWeeks = Array.from({ length: 53 }, (_, week) =>
+  Array.from({ length: 7 }, (_, day) => {
+    const value = (week * 11 + day * 7 + (week % 5) * 3) % 13;
+    return value < 4 ? 0 : value < 7 ? 1 : value < 10 ? 2 : value < 12 ? 3 : 4;
+  })
+);
+const contributionMonths = [[0, "Sep"], [4, "Oct"], [8, "Nov"], [13, "Dec"], [17, "Jan"], [21, "Feb"], [26, "Mar"], [30, "Apr"], [35, "May"], [39, "Jun"], [43, "Jul"], [48, "Aug"]];
 const Arrow = () => <span aria-hidden="true">↗</span>;
 export default function Home() {
   return (
@@ -29,6 +36,7 @@ export default function Home() {
         </a>
         <nav>
           <a href="#work">Work</a>
+          <a href="#history">History</a>
           <a href="#skills">Skills</a>
           <a href="#connect">Connect</a>
         </nav>
@@ -244,8 +252,34 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="github-history" id="history">
+        <div className="shell history-inner">
+          <div className="history-heading">
+            <p className="section-label">04 / GITHUB ACTIVITY</p>
+            <div>
+              <h2>Committed to the <em>craft.</em></h2>
+              <p>A year of building, learning, and shipping ideas—one green square at a time.</p>
+            </div>
+          </div>
+          <a className="contribution-card" href={links.github} target="_blank" rel="noreferrer" aria-label="View Akram Khan's GitHub contribution history">
+            <div className="contribution-topline"><span>CONTRIBUTION HISTORY</span><span>LAST 12 MONTHS <Arrow /></span></div>
+            <div className="contribution-chart" role="img" aria-label="GitHub-style contribution chart for the last 12 months">
+              <div className="month-labels">
+                {contributionMonths.map(([week, month]) => <span key={month} style={{ gridColumnStart: week + 1 }}>{month}</span>)}
+              </div>
+              <div className="chart-body">
+                <div className="day-labels" aria-hidden="true"><span>Mon</span><span>Wed</span><span>Fri</span></div>
+                <div className="contribution-grid">
+                  {contributionWeeks.flatMap((days, week) => days.map((level, day) => <i key={`${week}-${day}`} className={`level-${level}`} title={`${level} contribution level`} />))}
+                </div>
+              </div>
+            </div>
+            <div className="contribution-footer"><span>Keep showing up. The work adds up.</span><span className="legend">Less <i className="level-0" /><i className="level-1" /><i className="level-2" /><i className="level-3" /><i className="level-4" /> More</span></div>
+          </a>
+        </div>
+      </section>
       <section className="skills shell" id="skills">
-        <p className="section-label">04 / TOOLKIT</p>
+        <p className="section-label">05 / TOOLKIT</p>
         <div>
           <h2>
             Fluent in the <em>full</em> picture.
@@ -270,7 +304,7 @@ export default function Home() {
       </section>
       <section className="connect" id="connect">
         <div className="shell connect-inner">
-          <p className="section-label">05 / KEEP IN TOUCH</p>
+          <p className="section-label">06 / KEEP IN TOUCH</p>
           <h2>
             Let&apos;s make something
             <br />
