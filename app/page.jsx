@@ -136,18 +136,13 @@ export default function Home() {
                 A few things I&apos;ve been <em>building.</em>
               </h2>
               <p>
-                From live AI assistance to user-focused commerce experiences, I
-                make software that responds to real needs.
+                Practical products built around real user needs, from online
+                shopping journeys to tools that help people create stronger resumes.
               </p>
             </div>
           </div>
           <div className="project-grid">
-            <a
-              className="project project-lime"
-              href="https://github.com/AkramCodeer/ecoute"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <article className="project project-lime">
               <div className="browser">
                 <div className="browser-bar">
                   <i />
@@ -166,36 +161,39 @@ export default function Home() {
               </div>
               <div className="project-meta">
                 <p>
-                  AI EXPERIENCE / 01 <Arrow />
+                  E-COMMERCE / 01
                 </p>
-                <h3>Écoute</h3>
-                <span>Live transcription · GPT-3.5 · JavaScript</span>
+                <h3>Shop My Uniform</h3>
+                <span>Online uniform shopping experience</span>
+                <div className="project-actions">
+                  <a href="https://shop-my-uniform-zeta.vercel.app/" target="_blank" rel="noreferrer">Live site <Arrow /></a>
+                  <a href="https://github.com/AkramCodeer/shopMyUniform" target="_blank" rel="noreferrer">Source code <Arrow /></a>
+                </div>
               </div>
-            </a>
-            <a
-              className="project project-peach"
-              href="https://github.com/AkramCodeer/AniMates"
-              target="_blank"
-              rel="noreferrer"
-            >
+            </article>
+            <article className="project project-peach">
               <div className="phone">
                 <div className="notch" />
                 <p>
-                  Shop
+                  Build
                   <br />
-                  <em>smarter.</em>
+                  <em>your story.</em>
                 </p>
                 <div className="phone-card" />
                 <div className="phone-line" />
               </div>
               <div className="project-meta">
                 <p>
-                  WEB COMMERCE / 02 <Arrow />
+                  PRODUCTIVITY / 02
                 </p>
-                <h3>AniMates</h3>
-                <span>React · Cart · Wishlist · Payments</span>
+                <h3>Resume Builder</h3>
+                <span>Create and structure professional resumes</span>
+                <div className="project-actions">
+                  <a href="https://resune-builder-uy2h.vercel.app/" target="_blank" rel="noreferrer">Live site <Arrow /></a>
+                  <a href="https://github.com/AkramCodeer/ResuneBuilder" target="_blank" rel="noreferrer">Source code <Arrow /></a>
+                </div>
               </div>
-            </a>
+            </article>
           </div>
           <p className="project-note">
             Explore more projects, experiments, and source code on{" "}
@@ -221,11 +219,11 @@ export default function Home() {
             </p>
             <a
               className="button button-dark"
-              href="https://github.com/AkramCodeer/ecoute"
+              href={links.github}
               target="_blank"
               rel="noreferrer"
             >
-              View Écoute on GitHub <Arrow />
+              Explore my AI work on GitHub <Arrow />
             </a>
           </div>
           <div className="ai-card">
